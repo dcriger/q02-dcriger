@@ -19,6 +19,15 @@ TEST(PiezasTest, sanityCheck)
     ASSERT_TRUE(true);
 }
 
+TEST(PiezasTest, getBlank)
+{
+    Piezas game;
+    Piece piece;
+    piece = game.pieceAt(0,0);
+
+    ASSERT_EQ(piece, Blank);
+}
+
 TEST(PiezasTest, getOutOfBounds)
 {
     Piezas game;
@@ -52,5 +61,28 @@ TEST(PiezasTest, placeFirstX)
     confirm = game.dropPiece(2);
 
     ASSERT_EQ(confirm, game.pieceAt(2,2));
+}
+
+TEST(PiezasTest, fullRowXWin)
+{
+    Piezas game;
+    Piece piece;
+
+    game.dropPiece(0);  //x
+    game.dropPiece(0);  //o
+    game.dropPiece(1);  //x
+    game.dropPiece(1);  //o
+    game.dropPiece(2);  //x
+    game.dropPiece(0);  //o
+    game.dropPiece(3);  //x
+    game.dropPiece(3);  //o
+    game.dropPiece(2);  //x
+    game.dropPiece(1);  //o
+    game.dropPiece(2);  //x
+    game.dropPiece(3);  //o
+
+    piece = game.gameState();
+
+    ASSERT_EQ(piece, X);
 }
 
