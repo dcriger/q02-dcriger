@@ -23,7 +23,7 @@ TEST(PiezasTest, getOutOfBounds)
 {
     Piezas game;
 
-    ASSERT_EQ(Invlaid, game.pieceAt(1,5));
+    ASSERT_EQ(Invalid, game.pieceAt(1,5));
 }
 
 TEST(PiezasTest, blankBoard)
