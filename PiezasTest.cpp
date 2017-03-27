@@ -21,7 +21,7 @@ TEST(PiezasTest, sanityCheck)
 
 TEST(PiezasTest, blankBoard)
 {
-    //Piece board[3][4];
+    Piece board[3][4];
     int count = 0;
 
     board.reset();
