@@ -29,10 +29,9 @@ TEST(PiezasTest, blankBoard)
     {
         for(int j = 0; j < 4; j++)
         {
-            if(board[i][j] == Blank)
+            if(board[j][i] == Blank)
             {
                 count++;
-                std::cout<<count<<" ";
             }
         }
     }
