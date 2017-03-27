@@ -19,6 +19,13 @@ TEST(PiezasTest, sanityCheck)
     ASSERT_TRUE(true);
 }
 
+TEST(PiezasTest, getOutOfBounds)
+{
+    Piezas game;
+
+    ASSERT_EQ(Invlaid, game.pieceAt(1,5));
+}
+
 TEST(PiezasTest, blankBoard)
 {
     Piezas game;
@@ -46,3 +53,4 @@ TEST(PiezasTest, placeFirstX)
 
     ASSERT_EQ(confirm, game.pieceAt(2,2));
 }
+
