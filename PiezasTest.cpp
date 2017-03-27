@@ -32,6 +32,7 @@ TEST(PiezasTest, blankBoard)
             if(board[i][j] == Blank)
             {
                 count++;
+                std::cout<<count<<endl;
             }
         }
     }
