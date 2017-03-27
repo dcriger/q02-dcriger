@@ -22,7 +22,7 @@ TEST(PiezasTest, sanityCheck)
 TEST(PiezasTest, blankBoard)
 {
     Piezas game;
-    //Piece board[3][4];
+    Piece board[3][4];
     int count = 0;
 
     game.reset();
@@ -38,4 +38,15 @@ TEST(PiezasTest, blankBoard)
         }
     }
     ASSERT_EQ(count, 12);
+}
+
+TEST(PiezasTest, placeFirstX)
+{
+    Piezas game;
+    Piece board[3][4];
+    Piece confirm;
+
+    confirm = game.dropPiece(2);
+
+    ASSERT_EQ(confirm, X);
 }
