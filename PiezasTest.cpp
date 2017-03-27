@@ -21,10 +21,11 @@ TEST(PiezasTest, sanityCheck)
 
 TEST(PiezasTest, blankBoard)
 {
+    Piezas game;
     Piece board[3][4];
     int count = 0;
 
-    board.reset();
+    game.reset();
 
     for(int i = 0; i < 3; i++)
     {
