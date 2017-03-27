@@ -84,7 +84,7 @@ Piece Piezas::dropPiece(int column)
     }
     else if(board[1][column] == Blank)
     {
-        board[1][column] == turn;
+        board[1][column] = turn;
 
         if(turn == X)
         {
@@ -99,7 +99,7 @@ Piece Piezas::dropPiece(int column)
     }
     else if(board[0][column] == Blank)
     {
-        board[0][column] == turn;
+        board[0][column] = turn;
 
         if(turn == X)
         {
@@ -268,7 +268,7 @@ Piece Piezas::gameState()
     {
         if(board[1][1] == X)
         {
-            if(board][2][1] == X)
+            if(board[2][1] == X)
             {
                 x_amount = 3;
                 full_col_x = true;
@@ -316,7 +316,7 @@ Piece Piezas::gameState()
     {
         if(board[1][2] == X)
         {
-            if(board][2][2] == X)
+            if(board[2][2] == X)
             {
                 x_amount = 3;
                 full_col_x = true;
@@ -364,7 +364,7 @@ Piece Piezas::gameState()
     {
         if(board[1][3] == X)
         {
-            if(board][2][3] == X)
+            if(board[2][3] == X)
             {
                 x_amount = 3;
                 full_col_x = true;
