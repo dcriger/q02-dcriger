@@ -48,5 +48,5 @@ TEST(PiezasTest, placeFirstX)
 
     confirm = game.dropPiece(2);
 
-    ASSERT_EQ(confirm, X);
+    ASSERT_EQ(confirm, board[2][2]);
 }
