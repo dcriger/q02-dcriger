@@ -19,7 +19,7 @@ TEST(PiezasTest, sanityCheck)
     ASSERT_TRUE(true);
 }
 
-TEST(PiezasTest, blankBoard)
+/*TEST(PiezasTest, blankBoard)
 {
     Piezas game;
     Piece board[3][4];
@@ -36,7 +36,7 @@ TEST(PiezasTest, blankBoard)
         }
     }
     ASSERT_EQ(count, 12);
-}
+}*/
 
 TEST(PiezasTest, placeFirstX)
 {
