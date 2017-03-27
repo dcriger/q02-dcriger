@@ -220,7 +220,7 @@ Piece Piezas::gameState()
     {
         if(board[1][0] == X)
         {
-            if(board][2][0] == X)
+            if(board[2][0] == X)
             {
                 x_amount = 3;
                 full_col_x = true;
