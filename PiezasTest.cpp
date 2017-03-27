@@ -68,21 +68,31 @@ TEST(PiezasTest, fullRowXWin)
     Piezas game;
     Piece piece;
 
-    game.dropPiece(0);  //x
-    game.dropPiece(0);  //o
-    game.dropPiece(1);  //x
-    game.dropPiece(1);  //o
-    game.dropPiece(2);  //x
-    game.dropPiece(0);  //o
-    game.dropPiece(3);  //x
-    game.dropPiece(3);  //o
-    game.dropPiece(2);  //x
-    game.dropPiece(1);  //o
-    game.dropPiece(2);  //x
-    game.dropPiece(3);  //o
+    piece = game.dropPiece(0);  //x
+    piece = game.dropPiece(0);  //o
+    piece = game.dropPiece(1);  //x
+    piece = game.dropPiece(1);  //o
+    piece = game.dropPiece(2);  //x
+    piece = game.dropPiece(0);  //o
+    piece = game.dropPiece(3);  //x
+    piece = game.dropPiece(3);  //o
+    piece = game.dropPiece(2);  //x
+    piece = game.dropPiece(1);  //o
+    piece = game.dropPiece(2);  //x
+    piece = game.dropPiece(3);  //o
 
     piece = game.gameState();
 
     ASSERT_EQ(piece, X);
 }
 
+TEST(PiezasTest, toggleTurn)
+{
+    Piezas game;
+    Piece piece;
+
+    piece = game.dropPiece(0);
+    piece = game.dropPiece(0);
+
+    ASSERT_EQ(piece, O);
+}
