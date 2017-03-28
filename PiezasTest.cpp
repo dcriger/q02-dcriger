@@ -131,3 +131,36 @@ TEST(PiezasTest, gameNotOver)
 
     ASSERT_EQ(piece, Invalid);
 }
+
+TEST(PiezasTest, completeSingles)
+{
+    Piezas game;
+    Piece piece;
+
+    piece = game.dropPiece(0);  //x
+    piece = game.dropPiece(1);  //o
+    piece = game.dropPiece(2);  //x
+    piece = game.dropPiece(3);  //o
+    piece = game.dropPiece(1);  //x
+    piece = game.dropPiece(2);  //o
+    piece = game.dropPiece(3);  //x
+    piece = game.dropPiece(0);  //o
+    piece = game.dropPiece(0);  //x
+    piece = game.dropPiece(1);  //o
+    piece = game.dropPiece(2);  //x
+    piece = game.dropPiece(3);  //o
+
+    piece = game.gameState();
+
+    ASSERT_EQ(piece, Blank);
+}
+
+TEST(PiezasTest, dropOutOfBounds)
+{
+    Piezas game;
+    Piece piece;
+
+    piece = game.dropPiece(5);
+
+    ASSERT_EQ(piece, Invalid);
+}
